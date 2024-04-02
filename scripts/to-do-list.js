@@ -1,5 +1,9 @@
 const todoList = [];
 
+document.querySelector('.js-btn-add').addEventListener('click', ()=>{
+    addToToDoList()
+})
+
 function addToToDoList(){
     todo = document.querySelector('.input-todo-name').value;
     date = document.querySelector('.input-todo-date').value;
@@ -18,11 +22,11 @@ function refreshToDoContainer(){
 
     // For each vs forloop
 
-    todoList.forEach(function(todo,index){
+    todoList.forEach((todo,index)=>{
         const html = `<div class = 'todo-list-container-element'>
                         <p class = '.todo-element'>${todo[0]}</p> 
                         <p class = '.todo-element'>${todo[1]}</p>
-                        <button class = "btn-delete" onclick = 'deleteElement(${index})'>Delete</button> </div>`;
+                        <button class = "btn-delete js-btn-delete"')'>Delete</button> </div>`;
         todoListHTML += html;
     })
 
@@ -36,6 +40,13 @@ function refreshToDoContainer(){
     // }
 
     containerDiv.innerHTML = todoListHTML;
+    document.querySelectorAll('.js-btn-delete').forEach((deleteButton,index)=>{
+        deleteButton.addEventListener('click',()=>{
+            deleteElement(index);
+        })
+        
+    })
+    
 }
 
 function clearSearchBar(){
