@@ -1,0 +1,42 @@
+
+.todo-list-container{
+    width: 420px;
+    row-gap: 10px;
+    display:grid ;
+}
+
+.todo-list-container-element{
+    display: grid;
+    grid-template-columns: 1fr 100px 105px;
+    width: 420px;
+    row-gap: 10px;
+}
+
+.btn-delete{
+    background-color: rgb(122, 0, 0);
+    cursor: pointer;
+    border: none;
+    color: white;
+
+}
+
+.input-todo-name{
+    padding: 15px 0px 15px 10px;
+    margin-bottom: 20px;
+
+}
+
+.input-todo-date{
+    padding: 15px 0px 15px 10px;
+    margin-bottom: 20px;
+
+}
+
+.btn-add{
+    padding: 18px 40px 18px 40px;
+    border-radius: 0;
+    border:none;
+    color: white;
+    background-color: green;
+
+}
